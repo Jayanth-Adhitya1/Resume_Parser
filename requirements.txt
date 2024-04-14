@@ -8,3 +8,4 @@ PyMuPDFb==1.24.1
 PyPDF2==1.26.0
 Flask==3.0.3
 Werkzeug==3.0.0
+python-docx==1.1.0
