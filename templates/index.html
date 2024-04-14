@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OST Assignment Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px; /* Added margin for spacing */
+        }
+        h2 {
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        h3 {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px; /* Added margin for spacing */
+        }
+        form {
+            margin: 20px auto;
+            text-align: center;
+        }
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        p.error {
+            color: red;
+            text-align: center;
+        }
+        .instructions {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>OST Placement Search Assignment Submission</h1>
+    <h2>Resume Parser</h2>
+    <h3>By Jayanth Adhitya</h3>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple accept=".pdf,.docx,.doc" required>
+        <button type="submit">Upload</button>
+    </form>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+    <p class="instructions">Please select your resume file(s) in PDF, DOCX, or DOC format and click "Upload".</p>
+</body>
+</html>

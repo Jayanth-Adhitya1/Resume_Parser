@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser - Result</title>
+</head>
+<body>
+    <h1>Resume Information</h1>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Phone:</strong> {{ phone }}</p>
+    <p><strong>All Text:</strong></p>
+    <pre>{{ all_text }}</pre>
+    <form action="/download" method="post">
+        <input type="hidden" name="resumes" value="{{ resume }}">
+        <button type="submit">Download Excel</button>
+    </form>
+</body>
+</html>
